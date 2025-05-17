@@ -17,6 +17,7 @@
             android:id="@+id/action_login_to_rest"
             app:destination="@id/rest" />
     </fragment>
+
     <fragment
         android:id="@+id/menu"
         android:name="com.example.proje.menu"
@@ -29,9 +30,30 @@
             android:id="@+id/action_menu_to_wordle"
             app:destination="@id/wordle" />
         <action
-            android:id="@+id/action_menu_to_quiz"
+            android:id="@+id/action_menu_to_startQuizFragment"
+            app:destination="@id/startQuizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startQuizFragment"
+        android:name="com.example.proje.StartQuizFragment"
+        android:label="Start Quiz"
+        tools:layout="@layout/fragment_start_quiz">
+        <action
+            android:id="@+id/action_startQuizFragment_to_quizFragment"
             app:destination="@id/quiz" />
     </fragment>
+
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.example.proje.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz">
+        <argument
+            android:name="questionCount"
+            app:argType="integer" />
+    </fragment>
+
     <fragment
         android:id="@+id/words"
         android:name="com.example.proje.words"
@@ -46,33 +68,32 @@
         <action
             android:id="@+id/action_words_to_delete"
             app:destination="@id/delete" />
-
     </fragment>
+
     <fragment
         android:id="@+id/wordListFragment2"
         android:name="com.example.proje.WordListFragment"
         android:label="fragment_word_list"
         tools:layout="@layout/fragment_word_list" />
+
     <fragment
         android:id="@+id/wordadd"
         android:name="com.example.proje.wordadd"
         android:label="fragment_wordadd2"
         tools:layout="@layout/fragment_wordadd2" />
+
     <fragment
         android:id="@+id/wordle"
         android:name="com.example.proje.wordle"
         android:label="fragment_wordle"
         tools:layout="@layout/fragment_wordle" />
-    <fragment
-        android:id="@+id/quiz"
-        android:name="com.example.proje.quiz"
-        android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+
     <fragment
         android:id="@+id/delete"
         android:name="com.example.proje.delete"
         android:label="fragment_delete"
         tools:layout="@layout/fragment_delete" />
+
     <fragment
         android:id="@+id/rest"
         android:name="com.example.proje.rest"
