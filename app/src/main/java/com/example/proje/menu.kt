@@ -48,7 +48,7 @@ val action=menuDirections.actionMenuToWordle()
         Navigation.findNavController(view).navigate(action)
     }
     fun quiz(view: View){
-val action=menuDirections.actionMenuToQuiz()
+val action=menuDirections.actionMenuToStartQuizFragment()
         Navigation.findNavController(view).navigate(action)
     }
     override fun onDestroy() {
