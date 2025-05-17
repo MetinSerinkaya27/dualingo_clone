@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wordleContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".wordle">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <GridLayout
+        android:id="@+id/wordGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:rowCount="6"
+        android:layout_marginBottom="24dp"
+        />
 
-        android:id="@+id/recyclerView"
+    <EditText
+        android:id="@+id/guessInput"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:inputType="textCapCharacters"
+        android:hint="5 harfli kelime yaz"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginBottom="12dp"
+        />
+
+    <Button
+        android:id="@+id/submitGuessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahmini Gönder"
+        />
+</LinearLayout>
